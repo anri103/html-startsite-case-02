@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartSite Page 2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Стили для скелета этой страницы -->
+    <!-- Всё, что находится между этими тегами style НЕ ВКЛЮЧАТЬ В ВЁРСТКУ! -->
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        ul[class],
+        ol[class] {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        li,
+        figure,
+        figcaption,
+        blockquote,
+        dl,
+        dd {
+            margin: 0;
+        }
+
+        body {
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.17;
+            background-color: #120e1e;
+        }
+
+        .page-container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1300px;
+        }
+
+        a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .3s ease;
+        }
+
+        a:hover {
+            color: #eb8403;
+            text-decoration: none;
+        }
+
+        main {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        /* header */
+
+        header {
+            border-bottom: 1px solid;
+            border-color: rgba(136, 136, 136, .15);
+        }
+
+        .btn-hamburger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+            user-select: none;
+            padding: 15px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .btn-hamburger .icon-bar {
+            display: block;
+            width: 18px;
+            height: 2px;
+            margin: 3px 0;
+            background-color: #ffffff;
+        }
+
+        .header-wrap {
+            height: 70px;
+        }
+
+        .header-wrap .logo {
+            display: inline-block;
+            width: 170px;
+        }
+
+        .header-nav .nav-link {
+            color: #ffffff;
+            font-weight: 400;
+            padding: 0 20px;
+        }
+
+        .header-nav .nav-link:hover {
+            color: #eb8403;
+        }
+
+        .opacity-hover {
+            opacity: 1;
+        }
+
+        .opacity-hover:hover {
+            opacity: .75;
+        }
+
+        /* footer */
+
+        .footer-wrap {
+            height: 90px;
+        }
+
+        /* Адаптив */
+
+        @media screen and (min-width: 1025px) and (max-width: 1440px) {
+            .page-container {
+                max-width: 1240px;
+            }
+        }
+
+        @media screen and (max-width: 1366px) {
+            .page-container {
+                max-width: 1180px;
+            }
+        }
+
+        @media screen and (max-width: 1280px) {
+            .page-container {
+                max-width: 1090px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .page-container {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .d-lg-block {
+                display: block;
+            }
+
+            .d-lg-none {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Базовые стили для блоков -->
+    <!-- С ними уже работаем -->
+    <style>
+        .section-html img,
+        .img-fluid {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section-html p {
+            margin-bottom: 1.25rem;
+        }
+
+        .section-html ul {
+            padding-left: 20px;
+        }
+
+        .section-html p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-container {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .section-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+
+        .section-col-360 {
+            max-width: 360px;
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .section-col-10,
+        .section-col-20,
+        .section-col-30,
+        .section-col-40,
+        .section-col-50,
+        .section-col-60,
+        .section-col-70,
+        .section-col-80,
+        .section-col-90,
+        .section-col-100 {
+            flex: 0 0 auto;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .flex-direction-column {
+            flex-direction: column;
+        }
+
+        .h-100 {
+            height: 100%;
+        }
+
+        .flex-shrink-0 {
+            flex: 0 0 auto;
+        }
+
+        .me-20 {
+            margin-right: 20px;
+        }
+
+        .mt-55 {
+            margin-top: 55px;
+        }
+
+        .mt-35 {
+            margin-top: 35px;
+        }
+
+        .mt-15 {
+            margin-top: 15px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .p-15 {
+            padding: 15px;
+        }
+
+        .py-60 {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .py-30 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .py-20 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .pt-120 {
+            padding-top: 120px;
+        }
+
+        .ps-20 {
+            padding-left: 20px;
+        }
+
+        .ff-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .fz-18 {
+            font-size: 16px;
+        }
+
+        .fz-20 {
+            font-size: 18px;
+        }
+
+        .fz-24 {
+            font-size: 18px;
+        }
+
+        .fz-32 {
+            font-size: 20px;
+        }
+
+        .fz-34 {
+            font-size: 24px;
+        }
+
+        .fz-42 {
+            font-size: 28px;
+        }
+
+        .fz-51 {
+            font-size: 32px;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .fw-700 {
+            font-weight: 700;
+        }
+
+        .color-white {
+            color: #ffffff;
+        }
+
+        .color-blue {
+            color: #3BC3E1;
+        }
+
+        .color-green {
+            color: #27AE60;
+        }
+
+        .color-orange-hover:hover {
+            color: #eb8403;
+        }
+
+        .gradient-text-purple {
+            background-color: #117DFF;
+            background-image: linear-gradient(90deg, #117DFF, #CB34FF);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+
+        .bg-section-purple {
+            background-image: url(img/bg-section-purple.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        @media (min-width: 992px) {
+            .flex-lg-nowrap {
+                flex-wrap: nowrap;
+            }
+
+            .section-col-10 {
+                width: 10%;
+            }
+            
+            .section-col-20 {
+                width: 20%;
+            }
+
+            .section-col-30 {
+                width: 30%;
+            }
+
+            .section-col-40 {
+                width: 40%;
+            }
+
+            .section-col-50 {
+                width: 50%;
+            }
+
+            .section-col-60 {
+                width: 60%;
+            }
+
+            .section-col-70 {
+                width: 70%;
+            }
+
+            .section-col-80 {
+                width: 80%;
+            }
+
+            .section-col-90 {
+                width: 90%;
+            }
+
+            .justify-content-lg-end {
+                justify-content: end;
+            }
+
+            .text-lg-end {
+                text-align: end;
+            }
+
+            .fz-18 {
+                font-size: 18px;
+            }
+
+            .fz-20 {
+                font-size: 20px;
+            }
+
+            .fz-24 {
+                font-size: 24px;
+            }
+
+            .fz-32 {
+                font-size: 32px;
+            }
+
+            .fz-34 {
+                font-size: 34px;
+            }
+
+            .fz-42 {
+                font-size: 42px;
+            }
+
+            .fz-51 {
+                font-size: 51px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overflow-hidden">
+        <div class="page-container">
+
+            <!-- header -->
+            <!-- Для визуального представления, header в итоговой вёрстке не нужен -->
+            <header>
+                <div class="header-container">
+                    <div class="header-wrap d-flex justify-content-between align-items-center">
+                        <!-- Logo -->
+                        <a href="#" class="logo opacity-hover">
+                            <img src="img/startsite-logo-white.svg" alt="">
+                        </a>
+                        <!-- Button -->
+                        <div class="d-lg-none">
+                            <button type="button" class="btn-hamburger opacity-hover">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Menu -->
+                        <div class="d-none d-lg-block">
+                            <div class="d-flex align-items-center">
+                                <nav class="header-nav">
+                                    <ul class="d-flex">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">Об агентстве</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">Кейсы</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">Услуги</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">Блог</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="p-15">
+                                    <a href="tel:84951595901" class="color-white color-orange-hover fz-20 fw-600">+7
+                                        (495)
+                                        159-59-01</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- main -->
+            <!-- Взять код каждого section и его style и вставить в отдельный блок HTML на сайте -->
+            <main>
+
+                <!-- section-01 -->
+                <style>
+                    .section-01 {
+                        padding: 110px 0 60px;
+                    }
+                </style>
+                <section class="section-html section-01">
+                    <div class="section-container">
+                        <h1 class="fz-51 fw-600">«Заявки лились как из рога изобилия!»</h1>
+                        <div class="section-row mt-55">
+                            <div class="section-col-40">
+                                <div class="py-30">
+                                    <img src="img/section-01.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="section-col-60">
+                                <div class="py-30">
+                                    <p class="fz-34 fw-600">Как мы привели <span class="gradient-text-purple">почти 1000
+                                            заявок за 3,5 месяца</span> автору рыболовных туров в Карелию</p>
+                                </div>
+                                <div class="d-flex align-items-center mt-35">
+                                    <div class="flex-shrink-0 me-20">
+                                        <img src="img/icon-case-01.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <span class="fz-24">Общая стоимость тура <span class="fw-600">> 100 000 рублей</span> в неделю на 1
+                                            человека</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section-02 -->
+                <style>
+                    .section-02 .text-box {
+                        padding: 30px;
+                        border: 1px solid #585858;
+                        border-radius: 38px;
+                        background-color: rgba(0, 0, 0, 0.08);
+                        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.16);
+                    }
+
+                    .section-02 .text-box+.text-box {
+                        margin-top: 20px;
+                    }
+                    @media (min-width: 992px) {
+                        .section-02 .text-box {
+                            padding: 40px;
+                        }
+                    }
+                </style>
+                <section class="section-html section-02 bg-section-purple py-60">
+                    <div class="section-container">
+                        <div class="section-row">
+                            <div class="section-col-50 text-lg-end">
+                                <div class="py-30">
+                                    <h2 class="fz-34 fw-600"><span class="gradient-text-purple">Задачи</span>, которые
+                                        перед нами поставил клиент</h2>
+                                </div>
+                            </div>
+                            <div class="section-col-50">
+                                <div class="py-30">
+                                    <div class="text-box">
+                                        <span class="fz-24">Увеличение количества посещений сайта целевой аудиторией за
+                                            счет рекламной кампании, создание воронки продаж</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="fz-24">Увеличение объема продаж и набор 16 групп на авторский
+                                            тур</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section-03 -->
+                <style>
+                    .section-03 {
+                        position: relative;
+                        background-position: 100% 0;
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                    }
+
+                    .section-03 .text-box {
+                        padding: 30px;
+                        border: 1px solid #585858;
+                        border-radius: 38px;
+                        background-color: rgba(0, 0, 0, 0.08);
+                        box-shadow: 0px 4px 5px rgb(0 0 0 / 16%);
+                    }
+
+                    .section-03 .text-box+.text-box {
+                        margin-top: 34px;
+                    }
+                    @media (min-width: 992px) {
+                        .section-03 .text-box {
+                            padding: 40px;
+                        }
+                    }
+                </style>
+                <section class="section-html section-03 py-60">
+                    <div class="section-container">
+                        <div class="py-30">
+                            <h2 class="fz-42 fw-600"><span class="gradient-text-purple">Сложности</span>, с которыми мы
+                                столкнулись</h2>
+                        </div>
+                        <div class="py-30">
+                            <div class="text-box">
+                                <p class="fz-24 fw-700">Клиент обратился к нам <span class="color-blue">с готовым
+                                        «топорным» сайтом на HTML</span>. Скорость загрузки сайта была низкая <span
+                                        class="color-blue">(особенно на мобильных устройствах – менее 35%)</span> и, как
+                                    оказалось в процессе настройки рекламной кампании, по этой причине был высокий
+                                    процент отказа с сайта. <span class="color-blue">25% посетителей уходили с сайта
+                                        менее чем через 15 секунд</span>. На предложение сделать новый сайт – клиент
+                                    отказывался.
+                            </div>
+                            <div class="text-box">
+                                <p class="fz-24 fw-700">Тур авторский и дорогостоящий. Неделя рыбалки - <span
+                                        class="color-blue">ценник 60 000 рублей</span> без стоимости дороги и питания.
+                                    Общая стоимость тура переваливала за <span class="color-blue">100 000 в неделю на 1
+                                        человека</span>.</p>
+                            </div>
+                            <div class="text-box">
+                                <p class="fz-24 fw-700"><span class="color-blue">Стоимоть тура увеличила в разы воронку
+                                        продаж</span> (большинство клиентов, оформивших заявку, в результате
+                                    отсеивалась). <span class="color-blue">Основная причина – дороговизна</span>.
+                                    Поэтому клиенту <span class="color-blue">нужен был гигантский рекламный трафик на
+                                        сайт</span>.</p>
+                            </div>
+                        </div>
+                        <div class="py-30 pt-120">
+                            <div class="section-row">
+                                <div class="section-col-20">
+                                    <div class="py-30">
+                                        <img src="img/section-03.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="section-col-80">
+                                    <p class="fz-34 fw-600">Положительные моменты:</p>
+                                    <div class="text-box">
+                                        <p class="fz-24">Старт тура был с 1 июня. Но клиент обратился к нам еще в марте, до начала
+                                            туристического сезона.</p>
+                                        <p class="fz-24">Поэтому у нас было время на тесты гипотез и формирование маркетинговой
+                                            стратегии</p>
+                                    </div>
+                                    <div class="text-box">
+                                        <p class="fz-24">Клиент понимал, что заявки стоят денег, поэтому по необходимости без проблем
+                                            увеличивал рекламный бюджет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section-04 -->
+                <style>
+                    .section-04 {
+                        background-position: 50% 100%;
+                    }
+
+                    .section-04 .text-box {
+                        width: 100%;
+                        padding: 30px;
+                        border: 1px solid #585858;
+                        border-radius: 28px;
+                        background-color: rgba(0, 0, 0, 0.08);
+                    }
+
+                    .section-04 .item-step+.item-step {
+                        margin-top: 34px;
+                    }
+
+                    .section-04 .text-box .box-divider {
+                        width: 100%;
+                        height: 2px;
+                        padding: 15px 0;
+                        background-image: url(img/divider.png);
+                        background-position: 50% 50%;
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                    }
+
+                    @media (min-width: 992px) {
+                        .section-04 .text-box {
+                            padding: 32px 50px;
+                        }
+
+                        .section-html .text-special {
+                            margin-bottom: 95px;
+                        }
+                    }
+                </style>
+                <section class="section-html section-04 bg-section-purple py-60">
+                    <div class="section-container">
+                        <div class="py-30">
+                            <div class="section-row">
+                                <div class="section-col-40">
+                                    <div class="d-flex h-100 flex-direction-column justify-content-between py-30">
+                                        <h2 class="fz-42 fw-600">Этапы работы</h2>
+                                        <div class="text-special d-none d-lg-block">
+                                            <img src="img/section-04-special.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>        
+                                <div class="section-col-60">
+                                    <div class="py-30">
+
+                                        <div class="item-step">
+                                            <div class="d-flex justify-content-lg-end mb-10">
+                                                <img src="img/(01).png" alt="">
+                                            </div>
+                                            <div class="text-box">
+                                                <h3 class="fz-32 fw-600">Подбор целевой аудитории и определение УТП</h3>
+                                                <div class="box-divider"></div>
+                                                <p class="fz-18">На данном этапе клиент внес все разработанные и рекомендуемые правки на сайт, подготовив его к рекламному трафику.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="item-step">
+                                            <div class="d-flex mb-10">
+                                                <img src="img/(02).png" alt="">
+                                            </div>
+                                            <div class="text-box">
+                                                <h3 class="fz-32 fw-600">Увеличели скорость загрузки сайта</h3>
+                                                <div class="box-divider"></div>
+                                                <p class="fz-18">Провели минификацию файлов CSS и JS</p>
+                                                <p class="fz-18">Уменьшили количество HTTP-запросов</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="item-step">
+                                            <div class="d-flex justify-content-lg-end mb-10">
+                                                <img src="img/(03).png" alt="">
+                                            </div>
+                                            <div class="text-box">
+                                                <h3 class="fz-32 fw-600">Настройка рекламной кампании</h3>
+                                                <div class="box-divider"></div>
+                                                <ul>
+                                                    <li class="fz-18">С нуля подобрали все возможные целевые запросы, минус-слова.</li>
+                                                    <li class="fz-18">Через Яндекс.Wordstat был проанализирован спрос по регионам. Были
+                                                        определены регионы, в которых особенно пользуется спросом услуга
+                                                        клиента.</li>
+                                                    <li class="fz-18">Под каждый запрос написали отдельное объявление, с указанием
+                                                        основных преимуществ тура.</li>
+                                                    <li class="fz-18">Реклама в РСЯ (Рекламные сети Яндекса) для увеличения охвата целевой
+                                                        аудитории. Было разработано 6 креативов, прописаны разные тексты (с датами тура и
+                                                        без, с ценой и без, с датой и с ценой, без даты и без цены)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="item-step d-lg-none">
+                                            <img src="img/section-04-special.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-30">
+                            <div class="section-row align-items-center">
+                                <div class="section-col-20">
+                                    <div class="py-30">
+                                        <img src="img/section-04.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="section-col-80">
+                                    <div class="py-30">
+                                        <p class="fz-34 fw-600">Постоянно анализировали отчеты систем аналитики, что обеспечивало нам данные для оптимизации и усовершенствования кампании</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section-05 -->
+                <style>
+                    .section-05 .box-item,
+                    .section-05 .box-item-wide {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        padding: 50px 25px 50px;
+                        border: 1px solid #585858;
+                        border-radius: 12px;
+                        background-image: linear-gradient(180deg, #120E1E 0%, rgba(18, 14, 30, 0) 100%);
+                    }
+
+                    .section-05 .border-r-18 > img {
+                        border-radius: 18px;
+                    }
+
+                    @media (min-width: 992px) {
+                        .section-05 .box-item-wide {
+                            flex-direction: row;
+                            justify-content: space-around;
+                        }
+                    }
+                </style>
+                <section class="section-html section-05 py-60">
+                    <div class="section-container">
+                        <h2 class="fz-42 fw-600">Результаты</h2>
+                        <!-- item-1 -->
+                        <div class="py-60">
+                            <div class="py-30">
+                                <div class="section-row">
+                                    <div class="section-col-80">
+                                        <p class="fz-34 fw-600">Поиск <span class="gradient-text-purple">(02.04.2022 – 09.06.2022)</span></p>
+                                        <p class="fz-24">Первый месяц для рекламных кампаний стояло ограничение ежедневного бюджета 1000 рублей в месяц</p>
+                                        <p class="fz-24">Во второй месяц бюджет был увеличен до 2000 рублей в месяц</p>
+                                        <p class="fz-24">Для конверсии была выбрана цель – заполнение формы на сайте</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="border-r-18">
+                                    <img src="img/screen-01.jpg" alt="">
+                                </div>
+                                <p class="fz-24 mt-15">Стоит отметить, что с 1 мая, реклама на поиске крутилась одновременно с кампанией через Мастер.кампаний, поэтому трафик в мае снизился, но он  все равно был</p>
+                            </div>
+    
+                            <div class="py-30">
+                                <div class="section-row justify-content-center">
+                                    <div class="section-col-360 py-20">
+                                        <div class="box-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 me-20">
+                                                    <img src="img/icon-dialog.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fz-34">49</div>
+                                                    <div class="fz-16">Конверсия</div>
+                                                </div>
+                                            </div>
+                                            <div class="fz-20 mt-15">
+                                                <span class="color-green">826,58 ₽</span> средняя цена
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-col-360 py-20">
+                                        <div class="box-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 me-20">
+                                                    <img src="img/icon-percent.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fz-34">3,12</div>
+                                                    <div class="fz-16">Процент конверсии в заявку</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item-2 -->
+                        <div class="py-60">
+                            <div class="py-30">
+                                <div class="section-row">
+                                    <div class="section-col-80">
+                                        <p class="fz-34 fw-600">Реклама в РСЯ (рекламные сети Яндекса) с оплатой за клики <span class="gradient-text-purple">(02.04.2022 – 30.04.2022)</span></p>
+                                        <p class="fz-24">Первую неделю (02.04 -09.04) для рекламных кампаний стояло ограничение ежедневного бюджета в 500 рублей</p>
+                                        <p class="fz-24">С 10.04 бюджет был увеличен до 1000 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="border-r-18">
+                                    <img src="img/screen-02.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item-3 -->
+                        <div class="py-60">
+                            <div class="py-30">
+                                <div class="section-row">
+                                    <div class="section-col-80">
+                                        <p class="fz-34 fw-600">Мастера кампаний <span class="gradient-text-purple">(с 1 мая по 18 июля)</span> 2,5 месяца</p>
+                                        <p class="fz-24">С целью увеличения охватов решили попробовать Мастер кампаний. Географию оставили как и в предыдущих кампаниях</p>
+                                        <p class="fz-24">Стоимость конверсии взяли среднюю по аккаунту – 350 рублей за заполнение формы</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="border-r-18">
+                                    <img src="img/screen-03.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="section-row justify-content-center">
+                                    <div class="section-col-360 py-20">
+                                        <div class="box-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 me-20">
+                                                    <img src="img/icon-dialog.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fz-34">746</div>
+                                                    <div class="fz-16">конверсий</div>
+                                                </div>
+                                            </div>
+                                            <div class="fz-20 mt-15">
+                                                <span class="color-green">341,20 ₽</span> средняя цена
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-col-360 py-20">
+                                        <div class="box-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 me-20">
+                                                    <img src="img/icon-rouble.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fz-34">254 537</div>
+                                                    <div class="fz-16">Всего было потрачено</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item-4 -->
+                        <div class="py-60">
+                            <div class="py-30">
+                                <div class="section-row">
+                                    <div class="section-col-80">
+                                        <p class="fz-34 fw-600">Заключение<br> за период <span class="gradient-text-purple">(1.04.2022 – 18.07.2022)</span></p>
+                                        <p class="fz-24">С целью увеличения охватов решили попробовать Мастер кампаний. Географию оставили как и в предыдущих кампаниях </p>
+                                        <p class="fz-24">Стоимость заявки в 345 рублей для кампании с географией в основном на Москву и МО весьма приемлема</p>
+                                        <p class="fz-24">Приятный бонус – собралась большая база телефонных номеров людей, интересующихся рыболовными турами, которую клиент будет использовать в дальнейшем для рассылок о других турах</p>
+                                        <div class="d-flex align-items-center mt-35">
+                                            <div class="flex-shrink-0 me-20">
+                                                <img src="img/icon-dollar.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <span class="fz-24">Итоговый бюджет: 323 370 рублей</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="border-r-18">
+                                    <img src="img/screen-04.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="py-30">
+                                <div class="section-row justify-content-center">
+                                    <div class="section-col-70">
+                                        <div class="box-item-wide">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 me-20">
+                                                    <img src="img/icon-dialog.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fz-34">936</div>
+                                                    <div class="fz-16">конверсий</div>
+                                                </div>
+                                            </div>
+                                            <div class="fz-20 mt-15">
+                                                <span class="color-green">345,40 ₽</span> средняя цена
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- footer -->
+            <!-- Для визуального представления, не брать код footer -->
+            <footer>
+                <div class="footer-wrap d-flex justify-content-between align-items-center">
+                    <div>
+                        <p>© 2022, СтартСайт - Старт для Вашего бизнеса | <a href="#">Договор-оферта</a></p>
+                    </div>
+                    <div>
+                        <p>117638 Россия, Москва, Одесская улица, 2кС</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
